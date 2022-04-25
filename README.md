@@ -1,6 +1,6 @@
 <h2 align="center"> Analise de dados dos principais supermercados de Minas Gerais </h2> 
 
-Aqui eu utilizei dados da ABRAS, dos supermercados BH, DMA, Mart Minas e Bahamas para analisar através de técnicas estatísticas, gráficos e mapa principalmente, a concentração das suas lojas em Minas Gerais e a realção entre o número de lojas e a refeita bruta no ano de 2020.
+Aqui eu utilizei dados da ABRAS, dos supermercados BH, DMA, Mart Minas e Bahamas para analisar através de técnicas estatísticas, gráficos e mapa, a concentração das suas lojas em Minas Gerais e a realção entre o número de lojas e a receita bruta no ano de 2020.
 
 ![Lucas Lopes - Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
