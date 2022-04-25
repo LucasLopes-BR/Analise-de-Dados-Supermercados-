@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_18c9e89bddb64feabf1e5880cba64caf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_18c9e89bddb64feabf1e5880cba64caf" ></div>
+        
+</body>
+<script>    
+    
+            var map_18c9e89bddb64feabf1e5880cba64caf = L.map(
+                "map_18c9e89bddb64feabf1e5880cba64caf",
+                {
+                    center: [-18.1, -44.38],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2ab340e03a3143149c8dd0d233320b40 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            var heat_map_d8d63196cf504a818b3afbfdcb62f6ae = L.heatLayer(
+                [[-19.1551, -45.4444, 1.0], [-21.8797, -42.7176, 2.0], [-21.4256, -45.9477, 2.0], [-16.1785, -40.6942, 1.0], [-18.6456, -48.1934, 2.0], [-18.4357, -49.1847, 1.0], [-19.5902, -46.9438, 2.0], [-20.2863, -45.5373, 1.0], [-21.2214, -43.7703, 10.0], [-19.9102, -43.9266, 135.0], [-19.9668, -44.2008, 13.0], [-21.0927, -45.5612, 1.0], [-17.1135, -43.8104, 2.0], [-19.7386, -45.2622, 2.0], [-20.151, -44.2007, 1.0], [-17.3656, -44.9606, 1.0], [-19.8826, -43.6704, 1.0], [-20.8932, -45.2699, 1.0], [-17.6888, -42.5147, 2.0], [-20.9566, -43.811, 2.0], [-19.7868, -42.1292, 1.0], [-20.1912, -44.7664, 1.0], [-18.991, -46.3167, 1.0], [-21.3924, -42.6896, 2.0], [-19.0344, -43.4221, 2.0], [-20.4958, -43.851, 4.0], [-20.6634, -43.7846, 5.0], [-19.9321, -44.0539, 37.0], [-19.5179, -42.6276, 1.0], [-18.7527, -44.4303, 1.0], [-20.1446, -44.8912, 5.0], [-19.764, -44.3065, 6.0], [-20.4618, -45.4268, 2.0], [-20.0259, -48.9355, 1.0], [-18.8545, -41.9555, 4.0], [-18.7713, -42.9312, 1.0], [-21.305, -46.7081, 1.0], [-20.0252, -44.0569, 11.0], [-20.0707, -44.2994, 3.0], [-19.4703, -42.5476, 1.0], [-19.6239, -43.2312, 1.0], [-20.2501, -43.8038, 3.0], [-22.4225, -45.4598, 1.0], [-20.0818, -44.5801, 2.0], [-18.9772, -49.4639, 2.0], [-15.3432, -43.6688, 1.0], [-15.8022, -43.3132, 2.0], [-15.4802, -44.3639, 2.0], [-19.8126, -43.1735, 3.0], [-17.7398, -46.1715, 2.0], [-19.9448, -44.3451, 1.0], [-21.7595, -43.3398, 34.0], [-20.0237, -45.5401, 2.0], [-19.6397, -43.8932, 7.0], [-21.9671, -45.3498, 3.0], [-21.248, -45.0009, 2.0], [-21.5296, -42.6421, 2.0], [-20.3765, -43.414, 2.0], [-20.0582, -44.1883, 1.0], [-19.3306, -45.2434, 1.0], [-19.9794, -44.4318, 1.0], [-19.5543, -44.0868, 2.0], [-18.7302, -47.4912, 2.0], [-16.7282, -43.8578, 12.0], [-21.13, -42.3693, 4.0], [-17.8481, -40.3533, 2.0], [-19.9758, -43.8509, 9.0], [-20.5263, -43.6962, 2.0], [-20.3796, -43.512, 2.0], [-19.8534, -44.6114, 3.0], [-17.2252, -46.8711, 1.0], [-19.2732, -44.4044, 1.0], [-20.7193, -46.609, 1.0], [-18.5699, -46.5013, 3.0], [-18.9379, -46.9934, 2.0], [-19.6308, -44.0383, 6.0], [-17.3392, -44.934, 3.0], [-19.6741, -44.8964, 1.0], [-20.4762, -45.9589, 1.0], [-21.78, -46.5692, 1.0], [-19.2257, -45.0141, 1.0], [-20.4111, -42.8978, 4.0], [-22.2266, -45.9389, 2.0], [-19.4742, -44.1591, 1.0], [-19.7621, -44.0844, 14.0], [-19.884, -43.8263, 9.0], [-19.9604, -43.4101, 1.0], [-19.7548, -43.8497, 11.0], [-19.3661, -42.5446, 1.0], [-19.1662, -43.722, 1.0], [-21.4634, -43.5499, 2.0], [-15.9514, -44.8593, 1.0], [-21.8932, -45.5893, 1.0], [-21.1311, -44.2526, 8.0], [-19.6971, -43.9586, 1.0], [-20.0367, -44.1446, 2.0], [-18.5991, -43.3744, 1.0], [-19.4569, -44.2413, 5.0], [-17.8595, -41.5087, 7.0], [-21.6921, -45.2511, 5.0], [-18.2048, -45.2473, 1.0], [-21.3694, -45.5109, 3.0], [-21.1204, -42.9359, 5.0], [-19.7472, -47.9381, 8.0], [-18.9141, -48.2749, 15.0], [-16.3592, -46.9022, 1.0], [-21.5556, -45.4364, 3.0], [-17.5944, -44.7226, 2.0], [-19.6883, -43.9239, 7.0], [-20.7559, -42.8742, 3.0], [-21.0127, -42.8361, 1.0]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            var circle_213aed320fff48508afa1b3f9afd3057 = L.circle(
+                [-19.1551, -45.4444],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_213aed320fff48508afa1b3f9afd3057.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Abaeté<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_58c6f20b85d64cc5892e094167097ffe = L.circle(
+                [-21.8797, -42.7176],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_58c6f20b85d64cc5892e094167097ffe.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Além Paraíba<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a22fd391243a43e690b9d3568d0165dc = L.circle(
+                [-21.4256, -45.9477],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a22fd391243a43e690b9d3568d0165dc.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Alfenas<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6cd3b63151ba451a9e8adeee9ef0d7f2 = L.circle(
+                [-16.1785, -40.6942],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_6cd3b63151ba451a9e8adeee9ef0d7f2.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Almenara<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a617cb8ae08240f789c5ade8976c7540 = L.circle(
+                [-18.6456, -48.1934],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a617cb8ae08240f789c5ade8976c7540.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Araguari<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_342491476c604386a0c39b2f8328112e = L.circle(
+                [-18.4357, -49.1847],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_342491476c604386a0c39b2f8328112e.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Araporã<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_7299132d4fa64b39ab9adaa397ebad84 = L.circle(
+                [-19.5902, -46.9438],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_7299132d4fa64b39ab9adaa397ebad84.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Araxá<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b93da83ea7884e349188901a10fc547f = L.circle(
+                [-20.2863, -45.5373],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_b93da83ea7884e349188901a10fc547f.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Arcos<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_84b4c30acc42432e9bcdb6c46c594606 = L.circle(
+                [-21.2214, -43.7703],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.810717055349734, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_84b4c30acc42432e9bcdb6c46c594606.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Barbacena<li><bold> Total de lojas:10<li><bold> Sup.BH:6<li><bold> Grup.DMA:1<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3bd6d43cb06b44499a4112856dd1f397 = L.circle(
+                [-19.9102, -43.9266],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2561.7339835322073, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_3bd6d43cb06b44499a4112856dd1f397.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Belo Horizonte<li><bold> Total de lojas:135<li><bold> Sup.BH:72<li><bold> Grup.DMA:63<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_214b018925374006bbf9213a2222f6f5 = L.circle(
+                [-19.9668, -44.2008],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60.57722346046887, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_214b018925374006bbf9213a2222f6f5.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Betim<li><bold> Total de lojas:13<li><bold> Sup.BH:10<li><bold> Grup.DMA:3<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ff32296c6a674e569b4e45565b934221 = L.circle(
+                [-21.0927, -45.5612],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_ff32296c6a674e569b4e45565b934221.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Boa Esperança<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_da3b8b51f1d84dc786aae5f10cc8f207 = L.circle(
+                [-17.1135, -43.8104],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_da3b8b51f1d84dc786aae5f10cc8f207.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Bocaiúva<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d22711f61f11467a9233cb151f6b3696 = L.circle(
+                [-19.7386, -45.2622],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_d22711f61f11467a9233cb151f6b3696.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Bom Despacho<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fe2a1cc4fc344907945d253c5bdf91d9 = L.circle(
+                [-20.151, -44.2007],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_fe2a1cc4fc344907945d253c5bdf91d9.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Brumadinho<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ce37c342ff6c4074be4065a09275f86b = L.circle(
+                [-17.3656, -44.9606],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_ce37c342ff6c4074be4065a09275f86b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Buritizeiro<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_7cce16d5afe548dc8f6b493b8be22e95 = L.circle(
+                [-19.8826, -43.6704],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_7cce16d5afe548dc8f6b493b8be22e95.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Caeté<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5385725cc55344c6bd26fc639b1dd17d = L.circle(
+                [-20.8932, -45.2699],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_5385725cc55344c6bd26fc639b1dd17d.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Campo Belo<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_10052fad40494c04a2467466eb45bba8 = L.circle(
+                [-17.6888, -42.5147],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_10052fad40494c04a2467466eb45bba8.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Capelinha<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4c2bc614ed714552b47e5e37357962e3 = L.circle(
+                [-20.9566, -43.811],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_4c2bc614ed714552b47e5e37357962e3.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Carandaí<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_098f8c50e67b47f68cf230b82548ffe9 = L.circle(
+                [-19.7868, -42.1292],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_098f8c50e67b47f68cf230b82548ffe9.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Caratinga<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c482a1bd09454aada20f0edef9caa595 = L.circle(
+                [-20.1912, -44.7664],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_c482a1bd09454aada20f0edef9caa595.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Carmo do Cajuru<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6a2e880641b24ee09f1a38fcd93d913a = L.circle(
+                [-18.991, -46.3167],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_6a2e880641b24ee09f1a38fcd93d913a.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Carmo do Paranaíba<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_dc43d8b96c30402c963e561c32e0adb1 = L.circle(
+                [-21.3924, -42.6896],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_dc43d8b96c30402c963e561c32e0adb1.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Cataguases<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_17bc87db51a0478cbe3d9dff403b3fdc = L.circle(
+                [-19.0344, -43.4221],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_17bc87db51a0478cbe3d9dff403b3fdc.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Conceição do Mato Dentro<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_7fa7817edfae4860a1b5bfc250ec7d35 = L.circle(
+                [-20.4958, -43.851],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.18958683997628, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_7fa7817edfae4860a1b5bfc250ec7d35.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Congonhas<li><bold> Total de lojas:4<li><bold> Sup.BH:2<li><bold> Grup.DMA:1<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4080dccbc1544999b9d28fd43ed6eb7c = L.circle(
+                [-20.6634, -43.7846],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.132639022018838, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_4080dccbc1544999b9d28fd43ed6eb7c.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Conselheiro Lafaiete<li><bold> Total de lojas:5<li><bold> Sup.BH:2<li><bold> Grup.DMA:2<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_26f8105f7ffa451ab7efd983ddd89ddb = L.circle(
+                [-19.9321, -44.0539],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 322.94068230101703, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_26f8105f7ffa451ab7efd983ddd89ddb.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Contagem<li><bold> Total de lojas:37<li><bold> Sup.BH:26<li><bold> Grup.DMA:8<li><bold> Mart Minas:3<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_95a4955fd4ba4634a13e5c4d4de66730 = L.circle(
+                [-19.5179, -42.6276],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_95a4955fd4ba4634a13e5c4d4de66730.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Coronel Fabriciano<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_540dc00d088f4b06881dd70fcc07f638 = L.circle(
+                [-18.7527, -44.4303],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_540dc00d088f4b06881dd70fcc07f638.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Curvelo<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c9e5d95b32ba42708343f5b5adac67be = L.circle(
+                [-20.1446, -44.8912],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.132639022018838, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_c9e5d95b32ba42708343f5b5adac67be.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Divinópolis<li><bold> Total de lojas:5<li><bold> Sup.BH:3<li><bold> Grup.DMA:0<li><bold> Mart Minas:2<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4655de37174e4b8e984ff81b4c27c128 = L.circle(
+                [-19.764, -44.3065],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.580936309501134, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_4655de37174e4b8e984ff81b4c27c128.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Esmeraldas<li><bold> Total de lojas:6<li><bold> Sup.BH:6<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_16d10cb70eaa45c787216f7571444699 = L.circle(
+                [-20.4618, -45.4268],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_16d10cb70eaa45c787216f7571444699.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Formiga<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_994ce525b8d64f3c915a82921e68b2e6 = L.circle(
+                [-20.0259, -48.9355],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_994ce525b8d64f3c915a82921e68b2e6.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Frutal<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a6cf0ca987d745ca8971a337ef8f0fac = L.circle(
+                [-18.8545, -41.9555],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.18958683997628, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a6cf0ca987d745ca8971a337ef8f0fac.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Governador Valadares<li><bold> Total de lojas:4<li><bold> Sup.BH:0<li><bold> Grup.DMA:3<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_499d09a86c834ace85b771ecd1764636 = L.circle(
+                [-18.7713, -42.9312],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_499d09a86c834ace85b771ecd1764636.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Guanhães<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a543e05b1d944c8d86c9f86ea35c5234 = L.circle(
+                [-21.305, -46.7081],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a543e05b1d944c8d86c9f86ea35c5234.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Guaxupé<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d8559ce3cdab45008dd196ad84722e32 = L.circle(
+                [-20.0252, -44.0569],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 46.369060464010914, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_d8559ce3cdab45008dd196ad84722e32.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ibirité<li><bold> Total de lojas:11<li><bold> Sup.BH:10<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e389e8f9769241bb85bd485f092c161b = L.circle(
+                [-20.0707, -44.2994],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_e389e8f9769241bb85bd485f092c161b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Igarapé<li><bold> Total de lojas:3<li><bold> Sup.BH:3<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_75fe59c753f645859fb51ea5ff46a4d0 = L.circle(
+                [-19.4703, -42.5476],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_75fe59c753f645859fb51ea5ff46a4d0.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ipatinga<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_0fb44d5ee04244c999539924f4a0a0fb = L.circle(
+                [-19.6239, -43.2312],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_0fb44d5ee04244c999539924f4a0a0fb.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Itabira<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1c5ae9375cab4324890a80b12d592327 = L.circle(
+                [-20.2501, -43.8038],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_1c5ae9375cab4324890a80b12d592327.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Itabirito<li><bold> Total de lojas:3<li><bold> Sup.BH:2<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ec640477b7d44023bd2930eef2e51356 = L.circle(
+                [-22.4225, -45.4598],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_ec640477b7d44023bd2930eef2e51356.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Itajubá<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_45f8b78e5edb4240b989324d869565e1 = L.circle(
+                [-20.0818, -44.5801],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_45f8b78e5edb4240b989324d869565e1.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Itaúna<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5a1138f4113548208e5d52d05249d0c7 = L.circle(
+                [-18.9772, -49.4639],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_5a1138f4113548208e5d52d05249d0c7.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ituiutaba<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_cbba8f0018f84a849373f7fe575c95ff = L.circle(
+                [-15.3432, -43.6688],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_cbba8f0018f84a849373f7fe575c95ff.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Jaíba<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6c7a431f77d3480a95f16c762ea49599 = L.circle(
+                [-15.8022, -43.3132],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_6c7a431f77d3480a95f16c762ea49599.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Janaúba<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e0cd7ec723504384ba16ede6e3d98930 = L.circle(
+                [-15.4802, -44.3639],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_e0cd7ec723504384ba16ede6e3d98930.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Januária<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_43c1b00e9df746eaa7cee31c093a5e6c = L.circle(
+                [-19.8126, -43.1735],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_43c1b00e9df746eaa7cee31c093a5e6c.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:João Monlevade<li><bold> Total de lojas:3<li><bold> Sup.BH:0<li><bold> Grup.DMA:2<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_cde48156445f4565a1aa07480f1ed19a = L.circle(
+                [-17.7398, -46.1715],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_cde48156445f4565a1aa07480f1ed19a.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:João Pinheiro<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5e7d2cd229fa47339d8a0211f3dc08a3 = L.circle(
+                [-19.9448, -44.3451],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_5e7d2cd229fa47339d8a0211f3dc08a3.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Juatuba<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_144e5eb078ef4fe985861c7d686cceba = L.circle(
+                [-21.7595, -43.3398],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 282.07608496446403, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_144e5eb078ef4fe985861c7d686cceba.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Juiz de Fora<li><bold> Total de lojas:34<li><bold> Sup.BH:4<li><bold> Grup.DMA:2<li><bold> Mart Minas:2<li><bold> Grup.Bahamas:26
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_7846ac4b133948138f9d11ed78e25170 = L.circle(
+                [-20.0237, -45.5401],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_7846ac4b133948138f9d11ed78e25170.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Lagoa da Prata<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5e46a41b5afa4607a8e39dab1a0cf0c7 = L.circle(
+                [-19.6397, -43.8932],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.498670948012276, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_5e46a41b5afa4607a8e39dab1a0cf0c7.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Lagoa Santa<li><bold> Total de lojas:7<li><bold> Sup.BH:6<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a4204eaeaf364ccea4a3b030d5a29f8c = L.circle(
+                [-21.9671, -45.3498],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a4204eaeaf364ccea4a3b030d5a29f8c.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Lambari<li><bold> Total de lojas:3<li><bold> Sup.BH:3<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2026947446c344bd800332c4f57af05e = L.circle(
+                [-21.248, -45.0009],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_2026947446c344bd800332c4f57af05e.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Lavras<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_de1aa544fbfe48c69d8c14badf2911c2 = L.circle(
+                [-21.5296, -42.6421],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_de1aa544fbfe48c69d8c14badf2911c2.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Leopoldina<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f2dad06aff294e10afa179189275e11f = L.circle(
+                [-20.3765, -43.414],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_f2dad06aff294e10afa179189275e11f.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Mariana<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_de4d79ae4dc24410901e5c51bd9f8906 = L.circle(
+                [-20.0582, -44.1883],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_de4d79ae4dc24410901e5c51bd9f8906.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Mário Campos<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1d4b066674534d0390083bdcbdbaaf7b = L.circle(
+                [-19.3306, -45.2434],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_1d4b066674534d0390083bdcbdbaaf7b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Martinho Campos<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_0b82335c929e4714b8658b407244de68 = L.circle(
+                [-19.9794, -44.4318],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_0b82335c929e4714b8658b407244de68.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Mateus Leme<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d13c5b0379dc4f15846545b758dc3aa1 = L.circle(
+                [-19.5543, -44.0868],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_d13c5b0379dc4f15846545b758dc3aa1.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Matozinhos<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2e02abea90914600822542ab62b77142 = L.circle(
+                [-18.7302, -47.4912],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_2e02abea90914600822542ab62b77142.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Monte Carmelo<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a9f21ff47368486eab8d7a8f984f6b2d = L.circle(
+                [-16.7282, -43.8578],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 53.29543283815009, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a9f21ff47368486eab8d7a8f984f6b2d.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Montes Claros<li><bold> Total de lojas:12<li><bold> Sup.BH:11<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_34cd60c6ac194c769c42a6208b98e6a2 = L.circle(
+                [-21.13, -42.3693],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.18958683997628, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_34cd60c6ac194c769c42a6208b98e6a2.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Muriaé<li><bold> Total de lojas:4<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8efa37742aa24a07811eb445edf33754 = L.circle(
+                [-17.8481, -40.3533],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_8efa37742aa24a07811eb445edf33754.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Nanuque<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:2<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6dd3a95578534872bbf1e331f4d6b7a3 = L.circle(
+                [-19.9758, -43.8509],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.63473536961897, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_6dd3a95578534872bbf1e331f4d6b7a3.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Nova Lima<li><bold> Total de lojas:9<li><bold> Sup.BH:6<li><bold> Grup.DMA:2<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8715c0259cf64d4ca59051e313c7b0f7 = L.circle(
+                [-20.5263, -43.6962],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_8715c0259cf64d4ca59051e313c7b0f7.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ouro Branco<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f05fd2656b854830af71f40e081238e6 = L.circle(
+                [-20.3796, -43.512],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_f05fd2656b854830af71f40e081238e6.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ouro Preto<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9df9f0387a5b451e8be9c216cf5642f9 = L.circle(
+                [-19.8534, -44.6114],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_9df9f0387a5b451e8be9c216cf5642f9.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Pará de Minas<li><bold> Total de lojas:3<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_31f3213bd4f84777ab561ee23b2364cd = L.circle(
+                [-17.2252, -46.8711],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_31f3213bd4f84777ab561ee23b2364cd.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Paracatu<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ce2e9d7c68954a6493fab57f2424cbfa = L.circle(
+                [-19.2732, -44.4044],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_ce2e9d7c68954a6493fab57f2424cbfa.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Paraopeba<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_57f390806eb94d64ba32228e13d20ef3 = L.circle(
+                [-20.7193, -46.609],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_57f390806eb94d64ba32228e13d20ef3.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Passos<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6529f2e863dd4aa6b2f008d43707e741 = L.circle(
+                [-18.5699, -46.5013],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_6529f2e863dd4aa6b2f008d43707e741.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Patos de Minas<li><bold> Total de lojas:3<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:2<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_affc1ca3517241e0b2bb444957a9518b = L.circle(
+                [-18.9379, -46.9934],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_affc1ca3517241e0b2bb444957a9518b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Patrocínio<li><bold> Total de lojas:2<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e2d100f7bd334368bbec2cf9ac19c321 = L.circle(
+                [-19.6308, -44.0383],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.580936309501134, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_e2d100f7bd334368bbec2cf9ac19c321.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Pedro Leopoldo<li><bold> Total de lojas:6<li><bold> Sup.BH:5<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_87163867728f4b9981b1043002df9fbc = L.circle(
+                [-17.3392, -44.934],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_87163867728f4b9981b1043002df9fbc.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Pirapora<li><bold> Total de lojas:3<li><bold> Sup.BH:3<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8c542c98ebc14bac8cd379525cda48d9 = L.circle(
+                [-19.6741, -44.8964],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_8c542c98ebc14bac8cd379525cda48d9.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Pitangui<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4f99f5e3b3f14e98b68ac0a017953275 = L.circle(
+                [-20.4762, -45.9589],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_4f99f5e3b3f14e98b68ac0a017953275.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Piumhi<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ecd2d6be6380487a913e5c73f010c691 = L.circle(
+                [-21.78, -46.5692],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_ecd2d6be6380487a913e5c73f010c691.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Poços de Caldas<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_edd15acb973e47e1847b493cc8689284 = L.circle(
+                [-19.2257, -45.0141],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_edd15acb973e47e1847b493cc8689284.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Pompéu<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fade71e98bc44798acbab29c71de4335 = L.circle(
+                [-20.4111, -42.8978],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.18958683997628, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_fade71e98bc44798acbab29c71de4335.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ponte Nova<li><bold> Total de lojas:4<li><bold> Sup.BH:2<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1ffec8a9bb8d4f2f8af950941d8fa80b = L.circle(
+                [-22.2266, -45.9389],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_1ffec8a9bb8d4f2f8af950941d8fa80b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Pouso Alegre<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4b3bf874f5124edc8454750d6a126a51 = L.circle(
+                [-19.4742, -44.1591],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_4b3bf874f5124edc8454750d6a126a51.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Prudente de Morais<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_774bd5c323f64e7caf7548e869e67eae = L.circle(
+                [-19.7621, -44.0844],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 68.20321656073682, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_774bd5c323f64e7caf7548e869e67eae.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ribeirão das Neves<li><bold> Total de lojas:14<li><bold> Sup.BH:8<li><bold> Grup.DMA:6<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a96961eb0ee2489fa86c964ee9b87f86 = L.circle(
+                [-19.884, -43.8263],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.63473536961897, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a96961eb0ee2489fa86c964ee9b87f86.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Sabará<li><bold> Total de lojas:9<li><bold> Sup.BH:7<li><bold> Grup.DMA:2<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_db2c9c4ec8eb4af0879a89431cf65012 = L.circle(
+                [-19.9604, -43.4101],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_db2c9c4ec8eb4af0879a89431cf65012.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Santa Bárbara<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_87b97b185e2c4ad2b5fbe33737f3699b = L.circle(
+                [-19.7548, -43.8497],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 46.369060464010914, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_87b97b185e2c4ad2b5fbe33737f3699b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Santa Luzia<li><bold> Total de lojas:11<li><bold> Sup.BH:8<li><bold> Grup.DMA:3<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3a04135bf30741ada372a2bb4935456b = L.circle(
+                [-19.3661, -42.5446],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_3a04135bf30741ada372a2bb4935456b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Santana do Paraíso<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a59e36c4e55d407a9460277b2a074592 = L.circle(
+                [-19.1662, -43.722],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a59e36c4e55d407a9460277b2a074592.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Santana do Riacho<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c3f0e7df4f184336ba32f1856b303248 = L.circle(
+                [-21.4634, -43.5499],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_c3f0e7df4f184336ba32f1856b303248.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Santos Dumont<li><bold> Total de lojas:2<li><bold> Sup.BH:1<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a5dbbf2460f94066bfab788664b905b9 = L.circle(
+                [-15.9514, -44.8593],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_a5dbbf2460f94066bfab788664b905b9.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:São Francisco<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_87aab49173ff4d9293af0f7b7861c1ef = L.circle(
+                [-21.8932, -45.5893],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_87aab49173ff4d9293af0f7b7861c1ef.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:São Gonçalo do Sapucaí<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_234e76b9e6494480838d93065ce9381c = L.circle(
+                [-21.1311, -44.2526],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.85761802547598, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_234e76b9e6494480838d93065ce9381c.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:São João del Rei<li><bold> Total de lojas:8<li><bold> Sup.BH:5<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3242015888cc4a80add9a82a3c135588 = L.circle(
+                [-19.6971, -43.9586],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_3242015888cc4a80add9a82a3c135588.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:São José da Lapa<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b6aee4b6e44d4b05b533c3baa9c3b69c = L.circle(
+                [-20.0367, -44.1446],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_b6aee4b6e44d4b05b533c3baa9c3b69c.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Sarzedo<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e6b93d91d27047e39db3bab3d0be8c5e = L.circle(
+                [-18.5991, -43.3744],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_e6b93d91d27047e39db3bab3d0be8c5e.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Serro<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4595bd126ed04752bdf968d8decbd9fe = L.circle(
+                [-19.4569, -44.2413],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.132639022018838, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_4595bd126ed04752bdf968d8decbd9fe.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Sete Lagoas<li><bold> Total de lojas:5<li><bold> Sup.BH:0<li><bold> Grup.DMA:4<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f0ad8a31be8a4c838ef2eb454a5e8e4d = L.circle(
+                [-17.8595, -41.5087],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.498670948012276, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_f0ad8a31be8a4c838ef2eb454a5e8e4d.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Teófilo Otoni<li><bold> Total de lojas:7<li><bold> Sup.BH:0<li><bold> Grup.DMA:6<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_511461af1b6a40b2a06864a06a13303a = L.circle(
+                [-21.6921, -45.2511],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.132639022018838, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_511461af1b6a40b2a06864a06a13303a.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Três Corações<li><bold> Total de lojas:5<li><bold> Sup.BH:4<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_837acbb3df1c436a807e43de68bea0b0 = L.circle(
+                [-18.2048, -45.2473],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_837acbb3df1c436a807e43de68bea0b0.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Três Marias<li><bold> Total de lojas:1<li><bold> Sup.BH:1<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fd0daa38c39940ebb3714b45de65186c = L.circle(
+                [-21.3694, -45.5109],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_fd0daa38c39940ebb3714b45de65186c.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Três Pontas<li><bold> Total de lojas:3<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_cedf8c105227411dbaa26204d160bf92 = L.circle(
+                [-21.1204, -42.9359],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.132639022018838, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_cedf8c105227411dbaa26204d160bf92.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Ubá<li><bold> Total de lojas:5<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fe4b6473175947f6a6fea9f70462bd7b = L.circle(
+                [-19.7472, -47.9381],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.85761802547598, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_fe4b6473175947f6a6fea9f70462bd7b.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Uberaba<li><bold> Total de lojas:8<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:2<li><bold> Grup.Bahamas:5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c8356dcf83f146bf850b7b8a29c87bb2 = L.circle(
+                [-18.9141, -48.2749],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 76.16334587981113, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_c8356dcf83f146bf850b7b8a29c87bb2.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Uberlândia<li><bold> Total de lojas:15<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:4<li><bold> Grup.Bahamas:10
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ea4deb80858640a5b1899953f42d8e84 = L.circle(
+                [-16.3592, -46.9022],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_ea4deb80858640a5b1899953f42d8e84.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Unaí<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fa4aae299b8b49c8ba708f610fb8f967 = L.circle(
+                [-21.5556, -45.4364],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_fa4aae299b8b49c8ba708f610fb8f967.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Varginha<li><bold> Total de lojas:3<li><bold> Sup.BH:1<li><bold> Grup.DMA:1<li><bold> Mart Minas:1<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5118d4f1dae943a98f73300906569fd4 = L.circle(
+                [-17.5944, -44.7226],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0314331330207964, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_5118d4f1dae943a98f73300906569fd4.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Várzea da Palma<li><bold> Total de lojas:2<li><bold> Sup.BH:2<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d223665077e244cb83f1d8769cd4a995 = L.circle(
+                [-19.6883, -43.9239],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.498670948012276, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_d223665077e244cb83f1d8769cd4a995.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Vespasiano<li><bold> Total de lojas:7<li><bold> Sup.BH:5<li><bold> Grup.DMA:2<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2d3ef2284f27487fb3092bbd24f9a560 = L.circle(
+                [-20.7559, -42.8742],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.799546134795289, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_2d3ef2284f27487fb3092bbd24f9a560.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Viçosa<li><bold> Total de lojas:3<li><bold> Sup.BH:0<li><bold> Grup.DMA:1<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5c94e0322dac43d4825610ade783338c = L.circle(
+                [-21.0127, -42.8361],
+                {"bubblingMouseEvents": true, "color": "#0C00D6", "dashArray": null, "dashOffset": null, "fill": "#0E1A1D", "fillColor": "#0C00D6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_18c9e89bddb64feabf1e5880cba64caf);
+        
+    
+            circle_5c94e0322dac43d4825610ade783338c.bindTooltip(
+                `<div>
+                     <li><bold> Cidade:Visconde do Rio Branco<li><bold> Total de lojas:1<li><bold> Sup.BH:0<li><bold> Grup.DMA:0<li><bold> Mart Minas:0<li><bold> Grup.Bahamas:1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
