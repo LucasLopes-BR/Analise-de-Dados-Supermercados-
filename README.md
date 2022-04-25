@@ -53,6 +53,7 @@ Carreira em desenvolvimento nas áreas de Dados, Tecnologia, Estratégia, Desenv
 
 
 
+<img src="https://github-readme-stats.vercel.app/api?username=LucasLopes-BR&show_icons=true&theme=tokyonight"/>
 
 
 Made with 💖 by Lucas Lopes
