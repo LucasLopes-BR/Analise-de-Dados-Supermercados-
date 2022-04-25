@@ -2,12 +2,14 @@
 
 ![Lucas Lopes - Análise de Dados](https://user-images.githubusercontent.com/104323002/164995092-4fe953bc-4934-48a8-b134-77b334d3cb0d.jpeg)
 
+<a href="https://www.linkedin.com/in/lucas-lopes-br/" alt="linkedin" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white"></a> 
+<a href="https://wa.me/5532998342365" alt="WhatsApp" target="_blank"><img src="https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=https://wa.me/5584981430120"/></a>
+<a href="mailto:lucas.aguiarlopes26@gmail.com" alt="gmail" target="_blank"><img src="https://img.shields.io/badge/-Gmail-FF0000?style=flat-square&labelColor=FF0000&logo=gmail&logoColor=white&link=mailto:tassiofernandescosta@gmail.com" /></a>
+
 <h4 align="center"> Economista </h4>
 <h4 align="center"> Mestre em Economia e Gestão de Ciência, Tecnologia e Inovação </h4>
 
 Carreira em desenvolvimento nas áreas de Dados, Tecnologia, Estratégia, Desenvolvimento, Inovação e Negócios. Profissional com mestrado em Economia e Gestão de Ciência, Tecnologia e Inovação, com vasto conhecimento em ciência e análise de dados,indicadores de performance, estratégia e planejamento com foco na otimização de recursos e resultado.
-
-<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Flucas-lopes-br%2F"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social"></a>
 
 <b> Cientista de dados </b> com foco em coleta, estruturação e manipulação de dados para desenvolver modelos descritivos e preditivos visando resolver problemas e análises diversas.
 
@@ -40,6 +42,8 @@ Carreira em desenvolvimento nas áreas de Dados, Tecnologia, Estratégia, Desenv
 ![Lucas Lopes - HBX](https://img.shields.io/badge/Harvard%20Business%20School%20Online-Certificate%20in%20Business%20Analytics-red?style=for-the-badge&logo=Harvard)
 ![Lucas Lopes - HBX](https://img.shields.io/badge/IGTI-Bootcamp%20Analista%20de%20Dados-brightgreen?style=for-the-badge&logo=IGTI)
 ![Lucas Lopes - HBX](https://img.shields.io/badge/Raizzer-Forma%C3%A7%C3%A3o%20B.I%20Academy-lightgrey?style=for-the-badge&logo=RAIZZER)
+
+<a href="https://www.linkedin.com/in/lucas-lopes-br/" alt="linkedin" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white"></a>
 
 <b>Línguas:</b>
 
