@@ -13,6 +13,7 @@ Aqui eu utilizei dados da ABRAS, dos supermercados BH, DMA, Mart Minas e Bahamas
 ![Lucas Lopes - sklearn](https://img.shields.io/badge/-sklearn-green?style=for-the-badge&logo=sklearn)
 ![Lucas Lopes - seaborn](https://img.shields.io/badge/-seaborn-black?style=for-the-badge&logo=seaborn)
 ![Lucas Lopes - scipy stats](https://img.shields.io/badge/-scipystats-9cf?style=for-the-badge&logo=scipystats)
+![Lucas Lopes - excel](https://img.shields.io/badge/-Excel-green?style=for-the-badge&logo=Excel)
 
 
 <h2>📊 Alguns insights: </h2> 
