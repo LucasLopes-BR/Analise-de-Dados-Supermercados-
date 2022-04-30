@@ -23,7 +23,7 @@ Aqui eu utilizei dados da ABRAS, dos supermercados BH, DMA, Mart Minas e Bahamas
 1. Usando todas as informações referentes ao número de lojas e ao faturamento bruto de todos os rows do ranking da ABRAS, o coeficiente de determinação fica consideravelmente baixo (R²=0.241), isso acontece pois há a necessidade de manipular e filtrar os dados com foco na "raiz" do que queremos analizar. Desta forma decidi filtrar por estado (uf).
 2. Manipulando o ranking para que somente os supermercados de MG sejam levados em conta, há uma grande melhora no coeficiente de deteminação (R²=0.912) usando a mesma comparação y= Numero de lojas e x= Faturamento Bruto em 2020.
 3. É interessante notar que a linha de tendência é crescente, mostrando que a quantidade há relação positiva entre os as variáveis.
-4. Outro ponto é que, quando x= 0, y aumenta em 0.714.
+4. 
 5. A grande maioria dos pontos ficou concentrado proximo ao ponto inicial da linha de tendência (e na "base" do boxplot) indicando uma concentração, onde a maioria dos mercados ten menos que 50 e um faturamento bruto menor ate que 1.000.000.000.
 6. Existem outliers perceptiveis na linha de tendência e no boxplot, e esses são o foco dessa analise - BH, DMA, Bahamas,Mart Minas e Super Nosso (esse ultimo não entrou pois não a dados facilmente disponiveis).
 7. Na matriz de correlação vemos que há associação muito forte entre as variaveis x e y quando levamos em conta todos os dados.
